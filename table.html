@@ -30,14 +30,21 @@
                     <li class="nav-item mr-3">
                         <a href="index.html">
                             <button type="button" class="btn btn-primary">
-                                TAVOLO
+                                SELEZIONE TAVOLO
                             </button>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item mr-3">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#totalModal">
                             TOTALE 18€
                         </button>
+                    </li>
+                    <li class="nav-item">
+                        <a href="recap.html">
+                            <button type="button" class="btn btn-primary">
+                                RECAP
+                            </button>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -316,6 +323,21 @@
                             <span class="badge badge-primary badge-pill">3€</span>
                         </li>
                     </ul>
+                    <div class="input-group mb-3 mt-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Sconto Personalizzato</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Inserisci il valore"
+                            aria-label="Percent" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3 mt-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Codice scontrino</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Inserisci il codice"
+                            aria-label="Percent" aria-describedby="basic-addon1">
+                    </div>
+
                     <h1>TOTALE: 15€</h1>
                 </div>
                 <div class="modal-footer">
@@ -347,10 +369,9 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Personalizzato</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Inserisci la percentuale"
+                        <input type="text" class="form-control" placeholder="Inserisci il valore"
                             aria-label="Percent" aria-describedby="basic-addon1">
                     </div>
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>

@@ -1,0 +1,13 @@
+Listino;Tipologia;Prodotto;Codice prodotto;Totale pezzi;Totale vendite
+Chiosco;Bottiglia 0,33l;Bionda;;7;50
+Chiosco;Bottiglia 0,33l;Ambrata;;2;10
+Chiosco;Bottiglia 0,75l;Pils;;3;30
+Chiosco;Bottiglia 0,75l;IPA;;9;90
+Chiosco;Spina;Weizen;;3;30
+Chiosco;Spina;IPA;;2;20
+Chiosco;Cibo;Patatine;;3;9
+Chiosco;Cibo;Salsiccia;;2;20
+Manifestazione;Bottiglia 0,33l;Bionda;;7;50
+Manifestazione;Cibo;Patatine;;3;9
+Soci;Spina;Weizen;;9;90
+Soci;Spina;IPA;;2;20
