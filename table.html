@@ -12,286 +12,278 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="css/heroic-features.css" rel="stylesheet">
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Dimont Cash Desk App</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dimont Cash Desk App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item mr-3">
-                    <a href="index.html">
-                        <button type="button" class="btn btn-primary">
-                            TAVOLO
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-3">
+                        <a href="index.html">
+                            <button type="button" class="btn btn-primary">
+                                TAVOLO
+                            </button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#totalModal">
+                            TOTALE 18€
                         </button>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#totalModal">
-                        TOTALE 18€
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- Page Content -->
-<div class="container mt-5">
-    <div class="row">
-        <div class="col">
-            <div class="min-20">
-                <!-- LISTA CARRELLO -->
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Listino</th>
-                        <th scope="col">Prodotto</th>
-                        <th scope="col">Quantità</th>
-                        <th scope="col">Prezzo</th>
-                        <th scope="col">Prezzo Totale</th>
-                        <th scope="col">Sconto</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                            <button type="button" class="ml-3 btn btn-light" data-toggle="modal"
-                                    data-target="#editModal">
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil"
-                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                          d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-                                </svg>
-                            </button>
-                        </td>
-                        <td>Soci</td>
-                        <td>Bottiglia bionda 0,75</td>
-                        <td>1</td>
-                        <td>5€</td>
-                        <td>5€</td>
-                        <td>
-                            <button type="button" class="ml-3 btn btn-primary" data-toggle="modal"
-                                    data-target="#scontoModal">Sconto
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button type="button" class="ml-3 btn btn-light" data-toggle="modal"
-                                    data-target="#editModal">
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil"
-                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                          d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-                                </svg>
-                            </button>
-                        </td>
-                        <td>Soci</td>
-                        <td>Spina IPA</td>
-                        <td>2</td>
-                        <td>5€</td>
-                        <td>10€</td>
-                        <td>
-                            <button type="button" class="ml-3 btn btn-primary" data-toggle="modal"
-                                    data-target="#scontoModal">Sconto
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button type="button" class="ml-3 btn btn-light" data-toggle="modal"
-                                    data-target="#editModal">
-                                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil"
-                                     fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                          d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-                                </svg>
-                            </button>
-                        </td>
-                        <td>Soci</td>
-                        <td>Patatine</td>
-                        <td>2</td>
-                        <td>3€</td>
-                        <td>6€</td>
-                        <td>
-                            <button type="button" class="ml-3 btn btn-primary" data-toggle="modal"
-                                    data-target="#scontoModal">Sconto
-                            </button>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- SELEZIONE DEL LISTINO -->
-            <div class="row mb-3">
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Selezione Listino
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Chiosco</a>
-                      <a class="dropdown-item" href="#">Manifestazione</a>
-                      <a class="dropdown-item" href="#">Soci</a>
-                    </div>
-                  </div>
-            </div>
-            <!-- SELEZIONE DEI PRODOTTI -->
-            <div>
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="bottiglia-piccola-tab" data-toggle="tab"
-                           href="#bottiglia-piccola"
-                           role="tab" aria-controls="bottiglia-piccola" aria-selected="true">Bottiglia 0,33</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="bottiglia-grande-tab" data-toggle="tab" href="#bottiglia-grande"
-                           role="tab"
-                           aria-controls="bottiglia-grande" aria-selected="false">Bottiglia 0,75</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="spina-tab" data-toggle="tab" href="#spina" role="tab"
-                           aria-controls="spina"
-                           aria-selected="false">Spina</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="cibo-tab" data-toggle="tab" href="#cibo" role="tab" aria-controls="cibo"
-                           aria-selected="false">Cibo</a>
                     </li>
                 </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="bottiglia-piccola" role="tabpanel"
-                         aria-labelledby="bottiglia-piccola-tab">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/gjan-slider-min.png"
-                                     alt="">
-                                <p>BIONDA</p>
-                            </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/pils-min.png"
-                                     alt="">
-                                <p>PILS</p>
-                            </div>
-                            <div class="col-md-2">
+            </div>
+        </div>
+    </nav>
 
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/ambrata-slider-min.png"
-                                     alt="">
-                                <p>AMBRATA</p>
-                            </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/weizen-slider-min.png"
-                                     alt="">
-                                <p>WEIZEN</p>
-                            </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/ipa-slider-min.png" alt="">
-                                <p>IPA</p>
-                            </div>
+    <!-- Page Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="min-20 mt-5">
+                    <!-- LISTA CARRELLO -->
+                    <table class="table">
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Listino</th>
+                            <th scope="col">Prodotto</th>
+                            <th scope="col">Quantità</th>
+                            <th scope="col">Prezzo</th>
+                            <th scope="col">Prezzo Totale</th>
+                            <th scope="col">Sconto</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" class="ml-3 btn btn-light" data-toggle="modal"
+                                    data-target="#editModal">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>Soci</td>
+                            <td>Bottiglia bionda 0,75</td>
+                            <td>1</td>
+                            <td>5€</td>
+                            <td>5€</td>
+                            <td>
+                                <button type="button" class="ml-3 btn btn-primary" data-toggle="modal"
+                                    data-target="#scontoModal">Sconto
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" class="ml-3 btn btn-light" data-toggle="modal"
+                                    data-target="#editModal">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>Soci</td>
+                            <td>Spina IPA</td>
+                            <td>2</td>
+                            <td>5€</td>
+                            <td>10€</td>
+                            <td>
+                                <button type="button" class="ml-3 btn btn-primary" data-toggle="modal"
+                                    data-target="#scontoModal">Sconto
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="button" class="ml-3 btn btn-light" data-toggle="modal"
+                                    data-target="#editModal">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>Soci</td>
+                            <td>Patatine</td>
+                            <td>2</td>
+                            <td>3€</td>
+                            <td>6€</td>
+                            <td>
+                                <button type="button" class="ml-3 btn btn-primary" data-toggle="modal"
+                                    data-target="#scontoModal">Sconto
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- SELEZIONE DEL LISTINO -->
+                <div class="row mb-3">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Selezione Listino
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Chiosco</a>
+                            <a class="dropdown-item" href="#">Manifestazione</a>
+                            <a class="dropdown-item" href="#">Soci</a>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="bottiglia-grande" role="tabpanel"
-                         aria-labelledby="bottiglia-grande-tab">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/gjan-slider-min.png"
-                                     alt="">
-                                <p>BIONDA</p>
-                            </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/pils-min.png"
-                                     alt="">
-                                <p>PILS</p>
-                            </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/ambrata-slider-min.png"
-                                     alt="">
-                                <p>AMBRATA</p>
-                            </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/weizen-slider-min.png"
-                                     alt="">
-                                <p>WEIZEN</p>
-                            </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/ipa-slider-min.png" alt="">
-                                <p>IPA</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="spina" role="tabpanel" aria-labelledby="spina-tab">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/gjan-slider-min.png"
-                                     alt="">
-                                <p>BIONDA</p>
-                            </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/pils-min.png"
-                                     alt="">
-                                <p>PILS</p>
-                            </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/ambrata-slider-min.png"
-                                     alt="">
-                                <p>AMBRATA</p>
-                            </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/weizen-slider-min.png"
-                                     alt="">
-                                <p>WEIZEN</p>
-                            </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="https://birradimont.com/wp-content/uploads/2019/11/ipa-slider-min.png" alt="">
-                                <p>IPA</p>
+                </div>
+                <!-- SELEZIONE DEI PRODOTTI -->
+                <div>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="bottiglia-piccola-tab" data-toggle="tab"
+                                href="#bottiglia-piccola" role="tab" aria-controls="bottiglia-piccola"
+                                aria-selected="true">Bottiglia 0,33</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="bottiglia-grande-tab" data-toggle="tab" href="#bottiglia-grande"
+                                role="tab" aria-controls="bottiglia-grande" aria-selected="false">Bottiglia 0,75</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="spina-tab" data-toggle="tab" href="#spina" role="tab"
+                                aria-controls="spina" aria-selected="false">Spina</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="cibo-tab" data-toggle="tab" href="#cibo" role="tab"
+                                aria-controls="cibo" aria-selected="false">Cibo</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="bottiglia-piccola" role="tabpanel"
+                            aria-labelledby="bottiglia-piccola-tab">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/gjan-slider-min.png"
+                                        alt="">
+                                    <p>BIONDA</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/pils-min.png" alt="">
+                                    <p>PILS</p>
+                                </div>
+                                <div class="col-md-2">
+
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/ambrata-slider-min.png"
+                                        alt="">
+                                    <p>AMBRATA</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/weizen-slider-min.png"
+                                        alt="">
+                                    <p>WEIZEN</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/ipa-slider-min.png"
+                                        alt="">
+                                    <p>IPA</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="cibo" role="tabpanel" aria-labelledby="cibo-tab">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="images/panino.png" alt="">
-                                <p>PANINO</p>
+                        <div class="tab-pane fade" id="bottiglia-grande" role="tabpanel"
+                            aria-labelledby="bottiglia-grande-tab">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/gjan-slider-min.png"
+                                        alt="">
+                                    <p>BIONDA</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/pils-min.png" alt="">
+                                    <p>PILS</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/ambrata-slider-min.png"
+                                        alt="">
+                                    <p>AMBRATA</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/weizen-slider-min.png"
+                                        alt="">
+                                    <p>WEIZEN</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/ipa-slider-min.png"
+                                        alt="">
+                                    <p>IPA</p>
+                                </div>
                             </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid" src="images/pizza.png"
-                                     alt="">
-                                <p>PIZZA</p>
+                        </div>
+                        <div class="tab-pane fade" id="spina" role="tabpanel" aria-labelledby="spina-tab">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/gjan-slider-min.png"
+                                        alt="">
+                                    <p>BIONDA</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/pils-min.png" alt="">
+                                    <p>PILS</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/ambrata-slider-min.png"
+                                        alt="">
+                                    <p>AMBRATA</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/weizen-slider-min.png"
+                                        alt="">
+                                    <p>WEIZEN</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid"
+                                        src="https://birradimont.com/wp-content/uploads/2019/11/ipa-slider-min.png"
+                                        alt="">
+                                    <p>IPA</p>
+                                </div>
                             </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="images/patatine.png" alt="">
-                                <p>PATATINE</p>
-                            </div>
-                            <div class="col-md-2">
-                                <img class="img-fluid"
-                                     src="images/salsiccia.png" alt="">
-                                <p>SALSICCIA</p>
+                        </div>
+                        <div class="tab-pane fade" id="cibo" role="tabpanel" aria-labelledby="cibo-tab">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img class="img-fluid" src="images/panino.png" alt="">
+                                    <p>PANINO</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid" src="images/pizza.png" alt="">
+                                    <p>PIZZA</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid" src="images/patatine.png" alt="">
+                                    <p>PATATINE</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img class="img-fluid" src="images/salsiccia.png" alt="">
+                                    <p>SALSICCIA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -299,117 +291,117 @@
             </div>
         </div>
     </div>
-</div>
-<!-- Modal TOTALE Pagamento -->
-<div class="modal fade" id="totalModal" tabindex="-1" aria-labelledby="totalModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="totalModalLabel">TOTALE:</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Totale Prodotti
-                        <span class="badge badge-primary badge-pill">4</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Totale Euro
-                        <span class="badge badge-primary badge-pill">18€</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Sconto
-                        <span class="badge badge-primary badge-pill">3€</span>
-                    </li>
-                </ul>
-                <h1>TOTALE: 15€</h1>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-                <button type="button" class="btn btn-primary">Effettua Pagamento</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal SCONTO -->
-<div class="modal fade" id="scontoModal" tabindex="-1" aria-labelledby="scontoModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="scontoModalLabel">SCONTO:</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <button type="button" class="btn btn-primary btn-lg btn-block">5%</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block">10%</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block">15%</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block">20%</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block">25%</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block">50%</button>
-                <div class="input-group mb-3 mt-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">Personalizzato</span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Inserisci la percentuale" aria-label="Percent"
-                           aria-describedby="basic-addon1">
+    <!-- Modal TOTALE Pagamento -->
+    <div class="modal fade" id="totalModal" tabindex="-1" aria-labelledby="totalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="totalModalLabel">TOTALE:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-                <button type="button" class="btn btn-primary">Salva</button>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Totale Prodotti
+                            <span class="badge badge-primary badge-pill">4</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Totale Euro
+                            <span class="badge badge-primary badge-pill">18€</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Sconto
+                            <span class="badge badge-primary badge-pill">3€</span>
+                        </li>
+                    </ul>
+                    <h1>TOTALE: 15€</h1>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                    <button type="button" class="btn btn-primary">Effettua Pagamento</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Modal EDIT PRODOTTO -->
-<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="editModalLabel">PRODOTTO:</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+    <!-- Modal SCONTO -->
+    <div class="modal fade" id="scontoModal" tabindex="-1" aria-labelledby="scontoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scontoModalLabel">SCONTO:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">5%</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">10%</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">15%</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">20%</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">25%</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">50%</button>
+                    <div class="input-group mb-3 mt-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Personalizzato</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Inserisci la percentuale"
+                            aria-label="Percent" aria-describedby="basic-addon1">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                    <button type="button" class="btn btn-primary">Salva</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <button type="button" class="btn btn-danger btn-lg btn-block">RIMUOVI</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block">MODIFICA PREZZO</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal"
+        </div>
+    </div>
+
+    <!-- Modal EDIT PRODOTTO -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">PRODOTTO:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-danger btn-lg btn-block">RIMUOVI</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">MODIFICA PREZZO</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal"
                         data-target="#scontoModal">MODIFICA SCONTO
-                </button>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-                <button type="button" class="btn btn-primary">Salva</button>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+                    <button type="button" class="btn btn-primary">Salva</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- /.container -->
-<!-- Footer
+    <!-- /.container -->
+    <!-- Footer
 <footer class="py-5 bg-dark">
   <div class="container">
     <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
   </div>
 </footer> -->
 
-<!-- Bootstrap core JavaScript -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
